@@ -336,12 +336,12 @@ export class CoreSitesProvider {
      * @param {string} name Name of the site to check.
      * @return {any} Site data if it's a demo site, undefined otherwise.
      */
-    getDemoSiteData(name: string): any {
+    /*getDemoSiteData(name: string): any {
         const demoSites = CoreConfigConstants.demo_sites;
         if (typeof demoSites != 'undefined' && typeof demoSites[name] != 'undefined') {
             return demoSites[name];
         }
-    }
+    }*/
 
     /**
      * Check if a site is valid and if it has specifics settings for authentication (like force to log in using the browser).

@@ -86,10 +86,10 @@ export class CoreLoginSitePage {
             return;
         }
 
-        const modal = this.domUtils.showModalLoading(),
-            siteData = this.sitesProvider.getDemoSiteData(url);
+        const modal = this.domUtils.showModalLoading(); /*,
+            siteData = this.sitesProvider.getDemoSiteData(url);*/
 
-        if (siteData) {
+        /*if (siteData) {
             // It's a demo site.
             this.sitesProvider.getUserToken(siteData.url, siteData.username, siteData.password).then((data) => {
                 return this.sitesProvider.newSite(data.siteUrl, data.token, data.privateToken).then(() => {
@@ -103,7 +103,7 @@ export class CoreLoginSitePage {
                 modal.dismiss();
             });
 
-        } else {
+        } else {*/
             // Not a demo site.
             this.sitesProvider.checkSite(url).then((result) => {
 
@@ -123,7 +123,7 @@ export class CoreLoginSitePage {
             }).finally(() => {
                 modal.dismiss();
             });
-        }
+        /*}*/
     }
 
     /**
